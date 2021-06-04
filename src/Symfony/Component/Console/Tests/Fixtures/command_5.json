@@ -1,0 +1,16 @@
+{
+    "name": "descriptor:command5",
+    "hidden": false,
+    "deprecated": true,
+    "usage": [
+        "descriptor:command5",
+        "alias3",
+        "alias4"
+    ],
+    "description": "Command 5 description",
+    "help": "Command 5 description",
+    "definition": {
+        "arguments": {},
+        "options": {}
+    }
+}

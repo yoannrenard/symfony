@@ -3,6 +3,7 @@
         {
             "name": "help",
             "hidden": false,
+            "deprecated": false,
             "usage": [
                 "help [--format FORMAT] [--raw] [--] [<command_name>]"
             ],
@@ -106,6 +107,7 @@
         {
             "name": "list",
             "hidden": false,
+            "deprecated": false,
             "usage": [
                 "list [--raw] [--format FORMAT] [--short] [--] [<namespace>]"
             ],

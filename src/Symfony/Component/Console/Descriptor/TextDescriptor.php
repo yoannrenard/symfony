@@ -141,7 +141,7 @@ class TextDescriptor extends Descriptor
         if ($description = $command->getDescription()) {
             $this->writeText('<comment>Description:</comment>', $options);
             $this->writeText("\n");
-            $this->writeText('  '.$description);
+            $this->writeText('  '.($command->isDeprecated() ? '\<comment>[DEPRECATED]\</comment> ' : '').$description);
             $this->writeText("\n\n");
         }
 
@@ -237,7 +237,9 @@ class TextDescriptor extends Descriptor
                     $spacingWidth = $width - Helper::width($name);
                     $command = $commands[$name];
                     $commandAliases = $name === $command->getName() ? $this->getCommandAliasesText($command) : '';
-                    $this->writeText(sprintf('  <info>%s</info>%s%s', $name, str_repeat(' ', $spacingWidth), $commandAliases.$command->getDescription()), $options);
+                    $commandDeprecation = $command->isDeprecated() ? '<comment>[DEPRECATED]</comment> ' : '';
+                    $descriptionToWrite = $commandDeprecation.$commandAliases.$command->getDescription();
+                    $this->writeText(sprintf('  <info>%s</info>%s%s', $name, str_repeat(' ', $spacingWidth), $descriptionToWrite), $options);
                 }
             }
 

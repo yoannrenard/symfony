@@ -31,7 +31,7 @@ class ListCommandTest extends TestCase
         $application = new Application();
         $commandTester = new CommandTester($command = $application->get('list'));
         $commandTester->execute(['command' => $command->getName(), '--format' => 'xml']);
-        $this->assertMatchesRegularExpression('/<command id="list" name="list" hidden="0">/', $commandTester->getDisplay(), '->execute() returns a list of available commands in XML if --xml is passed');
+        $this->assertMatchesRegularExpression('/<command id="list" name="list" hidden="0" deprecated="0">/', $commandTester->getDisplay(), '->execute() returns a list of available commands in XML if --xml is passed');
     }
 
     public function testExecuteListsCommandsWithRawOption()

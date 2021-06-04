@@ -175,6 +175,7 @@ class JsonDescriptor extends Descriptor
         }
 
         $data['hidden'] = $command->isHidden();
+        $data['deprecated'] = $command->isDeprecated();
 
         return $data;
     }

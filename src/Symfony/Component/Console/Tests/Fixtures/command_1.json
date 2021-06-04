@@ -1,6 +1,7 @@
 {
     "name": "descriptor:command1",
     "hidden": false,
+    "deprecated": false,
     "usage": [
         "descriptor:command1",
         "alias1",

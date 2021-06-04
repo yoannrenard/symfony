@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symfony name="My Symfony application" version="v1.0">
   <commands>
-    <command id="help" name="help" hidden="0">
+    <command id="help" name="help" hidden="0" deprecated="0">
       <usages>
         <usage>help [--format FORMAT] [--raw] [--] [&lt;command_name&gt;]</usage>
       </usages>
@@ -56,7 +56,7 @@
         </option>
       </options>
     </command>
-    <command id="list" name="list" hidden="0">
+    <command id="list" name="list" hidden="0" deprecated="0">
       <usages>
         <usage>list [--raw] [--format FORMAT] [--short] [--] [&lt;namespace&gt;]</usage>
       </usages>
@@ -118,7 +118,7 @@
         </option>
       </options>
     </command>
-    <command id="descriptor:command1" name="descriptor:command1" hidden="0">
+    <command id="descriptor:command1" name="descriptor:command1" hidden="0" deprecated="0">
       <usages>
         <usage>descriptor:command1</usage>
         <usage>alias1</usage>
@@ -151,7 +151,7 @@
         </option>
       </options>
     </command>
-    <command id="descriptor:command2" name="descriptor:command2" hidden="0">
+    <command id="descriptor:command2" name="descriptor:command2" hidden="0" deprecated="0">
       <usages>
         <usage>descriptor:command2 [-o|--option_name] [--] &lt;argument_name&gt;</usage>
         <usage>descriptor:command2 -o|--option_name &lt;argument_name&gt;</usage>
@@ -192,7 +192,7 @@
         </option>
       </options>
     </command>
-    <command id="descriptor:command3" name="descriptor:command3" hidden="1">
+    <command id="descriptor:command3" name="descriptor:command3" hidden="1" deprecated="0">
       <usages>
         <usage>descriptor:command3</usage>
       </usages>
@@ -223,7 +223,7 @@
         </option>
       </options>
     </command>
-    <command id="descriptor:command4" name="descriptor:command4" hidden="0">
+    <command id="descriptor:command4" name="descriptor:command4" hidden="0" deprecated="0">
       <usages>
         <usage>descriptor:command4</usage>
         <usage>descriptor:alias_command4</usage>
@@ -256,11 +256,46 @@
         </option>
       </options>
     </command>
+    <command id="descriptor:command5" name="descriptor:command5" hidden="0" deprecated="1">
+      <usages>
+        <usage>descriptor:command5</usage>
+        <usage>alias3</usage>
+        <usage>alias4</usage>
+      </usages>
+      <description>Command 5 description</description>
+      <help>Command 5 description</help>
+      <arguments/>
+      <options>
+        <option name="--help" shortcut="-h" accept_value="0" is_value_required="0" is_multiple="0">
+          <description>Display help for the given command. When no command is given display help for the &lt;info&gt;list&lt;/info&gt; command</description>
+        </option>
+        <option name="--quiet" shortcut="-q" accept_value="0" is_value_required="0" is_multiple="0">
+          <description>Do not output any message</description>
+        </option>
+        <option name="--verbose" shortcut="-v" shortcuts="-v|-vv|-vvv" accept_value="0" is_value_required="0" is_multiple="0">
+          <description>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</description>
+        </option>
+        <option name="--version" shortcut="-V" accept_value="0" is_value_required="0" is_multiple="0">
+          <description>Display this application version</description>
+        </option>
+        <option name="--ansi" shortcut="" accept_value="0" is_value_required="0" is_multiple="0">
+          <description>Force (or disable --no-ansi) ANSI output</description>
+        </option>
+        <option name="--no-ansi" shortcut="" accept_value="0" is_value_required="0" is_multiple="0">
+          <description>Negate the "--ansi" option</description>
+        </option>
+        <option name="--no-interaction" shortcut="-n" accept_value="0" is_value_required="0" is_multiple="0">
+          <description>Do not ask any interactive question</description>
+        </option>
+      </options>
+    </command>
   </commands>
   <namespaces>
     <namespace id="_global">
       <command>alias1</command>
       <command>alias2</command>
+      <command>alias3</command>
+      <command>alias4</command>
       <command>help</command>
       <command>list</command>
     </namespace>
@@ -273,6 +308,7 @@
       <command>descriptor:command2</command>
       <command>descriptor:command3</command>
       <command>descriptor:command4</command>
+      <command>descriptor:command5</command>
     </namespace>
   </namespaces>
 </symfony>

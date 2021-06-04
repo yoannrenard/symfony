@@ -1,6 +1,7 @@
 {
     "name": "descriptor:command2",
     "hidden": false,
+    "deprecated": false,
     "usage": [
         "descriptor:command2 [-o|--option_name] [--] <argument_name>",
         "descriptor:command2 -o|--option_name <argument_name>",

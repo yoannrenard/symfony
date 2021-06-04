@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command id="descriptor:command5" name="descriptor:command5" hidden="0" deprecated="1">
+  <usages>
+    <usage>descriptor:command5</usage>
+    <usage>alias3</usage>
+    <usage>alias4</usage>
+  </usages>
+  <description>Command 5 description</description>
+  <help>Command 5 description</help>
+  <arguments/>
+  <options/>
+</command>

@@ -18,6 +18,7 @@ use Symfony\Component\Console\Tests\Fixtures\DescriptorApplication1;
 use Symfony\Component\Console\Tests\Fixtures\DescriptorApplication2;
 use Symfony\Component\Console\Tests\Fixtures\DescriptorCommand1;
 use Symfony\Component\Console\Tests\Fixtures\DescriptorCommand2;
+use Symfony\Component\Console\Tests\Fixtures\DescriptorCommand5;
 
 /**
  * @author Jean-François Simon <contact@jfsimon.fr>
@@ -69,6 +70,7 @@ class ObjectsProvider
         return [
             'command_1' => new DescriptorCommand1(),
             'command_2' => new DescriptorCommand2(),
+            'command_5' => new DescriptorCommand5(),
         ];
     }
 

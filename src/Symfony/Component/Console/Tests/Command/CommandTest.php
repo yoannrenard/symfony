@@ -415,6 +415,15 @@ class CommandTest extends TestCase
         $this->assertSame('|foo|f', Php8Command::getDefaultName());
         $this->assertSame('desc', Php8Command::getDefaultDescription());
     }
+
+    public function testSetDeprecated()
+    {
+        $command = new \TestCommand();
+        $this->assertFalse($command->isDeprecated());
+
+        $command->setDeprecated();
+        $this->assertTrue($command->isDeprecated());
+    }
 }
 
 // In order to get an unbound closure, we should create it outside a class

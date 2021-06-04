@@ -141,6 +141,7 @@ class MarkdownDescriptor extends Descriptor
         $this->write(
             '`'.$command->getName()."`\n"
             .str_repeat('-', Helper::width($command->getName()) + 2)."\n\n"
+            .($command->isDeprecated() ? '[DEPRECATED] ' : '')
             .($command->getDescription() ? $command->getDescription()."\n\n" : '')
             .'### Usage'."\n\n"
             .array_reduce(array_merge([$command->getSynopsis()], $command->getAliases(), $command->getUsages()), function ($carry, $usage) {

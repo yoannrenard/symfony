@@ -59,6 +59,7 @@ class Command
     private $synopsis = [];
     private $usages = [];
     private $helperSet;
+    private $deprecated = false;
 
     /**
      * @return string|null The default command name or null when no default name is set
@@ -689,5 +690,25 @@ class Command
         if (!preg_match('/^[^\:]++(\:[^\:]++)*$/', $name)) {
             throw new InvalidArgumentException(sprintf('Command name "%s" is invalid.', $name));
         }
+    }
+
+    /**
+     * @param bool $deprecated Whether the command is deprecated or not
+     *
+     * @return Command The current instance
+     */
+    public function setDeprecated(bool $deprecated = true)
+    {
+        $this->deprecated = $deprecated;
+
+        return $this;
+    }
+
+    /**
+     * @return bool Whether the command is deprecated or not
+     */
+    public function isDeprecated()
+    {
+        return $this->deprecated;
     }
 }

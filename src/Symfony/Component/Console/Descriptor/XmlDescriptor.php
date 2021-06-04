@@ -52,6 +52,7 @@ class XmlDescriptor extends Descriptor
         $commandXML->setAttribute('id', $command->getName());
         $commandXML->setAttribute('name', $command->getName());
         $commandXML->setAttribute('hidden', $command->isHidden() ? 1 : 0);
+        $commandXML->setAttribute('deprecated', $command->isDeprecated() ? 1 : 0);
 
         $commandXML->appendChild($usagesXML = $dom->createElement('usages'));
 
